@@ -8,3 +8,7 @@ IT25101614 - Gunawardhana V.D.W <br>
 IT25103475 - Sihath M.G.V <br>
 IT25101340 - Jayasundara D.N <br>
 IT25103277 - Amarathunge A.A.M.D.P.C <br>
+
+<h5>Given Datasets:</h5>
+- Stress_Dataset.csv - Rejected becuase dataset is not balanced <br>
+- StressLevelDataset.csv - 1100 entries
