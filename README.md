@@ -22,3 +22,8 @@ IT25103277 - Amarathunge A.A.M.D.P.C <br>
     <li>Logistic Regression (PCA Dataset)</li>
     <li>Naive Bayes (PCA Dataset)</li>
 </ul>
+
+<h3>Deployement (Fast API)</h3>
+<ul>
+    <li>Check Out Live Deployemengt: https://mindcheck-stress-predictor.onrender.com/</li>
+</ul>
