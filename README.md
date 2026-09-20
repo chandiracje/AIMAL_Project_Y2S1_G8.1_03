@@ -25,5 +25,5 @@ IT25103277 - Amarathunge A.A.M.D.P.C <br>
 
 <h3>Deployement (Fast API)</h3>
 <ul>
-    <li>Check Out Live Deployemengt: https://mindcheck-stress-predictor.onrender.com/</li>
+    <li>Check Out Live Deployment: https://mindcheck-stress-predictor.onrender.com/</li>
 </ul>
