@@ -1,6 +1,6 @@
-<b>MLB G8.1 03 AIML Project </b> 
+**MLB G8.1 03 AIML Project**
 
-<h2>Student Stress Prediction ML Training & Preprocessing </h2>
+## Student Stress Prediction ML Training & Preprocessing
 
 IT25102446 - Edirisinghe E.M.C.J <br>
 IT25100458 - Silva S.N.A <br>
@@ -9,21 +9,43 @@ IT25103475 - Sihath M.G.V <br>
 IT25101340 - Jayasundara D.N <br>
 IT25103277 - Amarathunge A.A.M.D.P.C <br>
 
-<h5>Given Datasets:</h5>
-- Stress_Dataset.csv - Rejected becuase dataset is not balanced <br>
-- StressLevelDataset.csv - 1100 entries
+### Datasets
+- `Stress_Dataset.csv` - Rejected: heavily imbalanced (91% of rows in one class) and unrelated to the other dataset.
+- `StressLevelDataset.csv` - Used: 1100 entries, 20 features, balanced 3-class target (Low / Medium / High).
 
-<h3>Models we are gonna use:</h3>
-<ul>
-    <li>Random Forest (Feature Selected Dataset with 10 best)</li>
-    <li>SVM (PCA Dataset)</li>
-    <li>MLP (PCA Dataset)</li>
-    <li>KNN (PCA Dataset)</li>
-    <li>Logistic Regression (PCA Dataset)</li>
-    <li>Naive Bayes (PCA Dataset)</li>
-</ul>
+### Final models
 
-<h3>Deployement (Fast API)</h3>
-<ul>
-    <li>Check Out Live Deployment: https://mindcheck-stress-predictor.onrender.com/</li>
-</ul>
+| Model | Input features | Version |
+|---|---|---|
+| IT25102446 - KNN | Top-10 (ANOVA) | Tuned |
+| IT25101340 - Logistic Regression | Top-10 (ANOVA) | Tuned |
+| IT25103277 - Naive Bayes | Top-10 (ANOVA) | Tuned |
+| IT25100458 - Random Forest | Top-10 (Random Forest importance) | Tuned |
+| IT25101614 - SVM | PCA (2 components) | Untuned (default RBF) |
+| IT25103475 - MLP | PCA (2 components) | Tuned |
+
+### Results (test set, n = 220)
+
+| Model | Accuracy | Macro-F1 |
+|---|---|---|
+| IT25102446 - KNN | 0.891 | 0.891 |
+| IT25101340 - Logistic Regression | 0.891 | 0.892 |
+| IT25103277 - Naive Bayes | 0.895 | 0.898 |
+| IT25101614 - SVM | 0.895 | 0.897 |
+| IT25100458 - Random Forest | 0.886 | 0.887 |
+| IT25103475 - MLP | 0.900 | 0.902 |
+
+All six models are statistically comparable (95% CI is about ±4 points). See `Model_Comparison.ipynb` for the full evaluation.
+
+### Notebook run order
+1. Data Cleaning (IT25103475)
+2. Outlier Removal (IT25101340)
+3. Scaling (IT25102446)
+4. Feature Engineering (IT25100458)
+5. Feature Selection (IT25103277)
+6. PCA (IT25101614)
+7. Model notebooks (KNN, Logistic Regression, Naive Bayes, SVM, Random Forest, MLP)
+8. `Model_Comparison.ipynb`
+
+### Deployment (FastAPI)
+- Live deployment: https://mindcheck-stress-predictor.onrender.com/
