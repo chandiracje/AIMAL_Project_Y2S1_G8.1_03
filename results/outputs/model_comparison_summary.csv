@@ -1,0 +1,7 @@
+Model,Final model,Test acc,Macro-F1,CV acc mean,CV acc std
+KNN,Tuned,0.891,0.891,0.885,0.03
+Logistic Regression,Tuned,0.891,0.892,0.872,0.032
+Naive Bayes,Tuned,0.895,0.898,0.889,0.028
+SVM,Untuned (default rbf),0.895,0.897,0.87,0.026
+Random Forest,Tuned,0.886,0.886,0.874,0.032
+MLP,Tuned (PCA),0.9,0.902,0.886,0.023
