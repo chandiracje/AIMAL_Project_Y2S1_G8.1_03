@@ -5,3 +5,9 @@ Naive Bayes,Tuned,0.895,0.898,0.889,0.028
 SVM,Untuned (default rbf),0.895,0.897,0.87,0.026
 Random Forest,Tuned,0.886,0.886,0.874,0.032
 MLP,Tuned (PCA),0.9,0.902,0.886,0.023
+Gradient Boosting,Tuned (PCA),0.886,0.886,0.872,0.028
+Decision Tree,Tuned (PCA),0.882,0.882,0.875,0.04
+Extra Trees,Tuned,0.886,0.887,0.878,0.032
+LDA,Tuned,0.891,0.893,0.882,0.023
+QDA,Tuned,0.905,0.906,0.883,0.025
+K-Means,Tuned (unsupervised),0.855,0.857,,
